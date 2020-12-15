@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic
+  name: spring-boot-hello-demo
   #namespace: staging
 spec:
   selector:
       matchLabels:
-        app: petclinic
+        app: spring-boot-hello-demo
   replicas: 3
   template:
       metadata:
         labels:
-            app: petclinic
+            app: spring-boot-hello-demo
       spec:
         containers:
-        - name: petclinic
+        - name: spring-boot-hello-demo
           image: image-registry.openshift-image-registry.svc:5000/${projectname} # :${IMAGE_TAG}
           imagePullPolicy: Always
           livenessProbe:

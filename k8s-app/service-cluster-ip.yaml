@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: petclinic-internal-service
+  name: spring-boot-hello-demo-internal-service
   #namespace: staging
   #annotations:
   #      service.beta.kubernetes.io/azure-load-balancer-internal: "true"
@@ -16,5 +16,5 @@ spec:
     targetPort: 8081
     name: management
   selector:
-    app: petclinic
+    app: spring-boot-hello-demo
   type: ClusterIP
